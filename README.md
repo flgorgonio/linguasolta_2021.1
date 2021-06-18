@@ -1,19 +1,15 @@
-# Projeto #linguasolta 2021.1
-Escola de Idiomas Língua Solta
+# Escola de Idiomas Língua Solta
+Projeto Sistema de Gestão Escolar 
 
 Exemplo de Projeto para a Disciplina DCT1106 - Programação, 2021.1
 
 #
 
 Universidade Federal do Rio Grande do Norte 
-
 Centro de Ensino Superior do Seridó 
-
 Departamento de Computação e Tecnologia 
-
 Disciplina DCT1106 -- Programação 
 
-Projeto Sistema de Gestão Escolar 
 
 Developed by @flgorgonio - Jun, 2021
 
