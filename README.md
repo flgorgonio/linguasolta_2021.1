@@ -1,7 +1,9 @@
 # Projeto #linguasolta 2021.1
 Escola de Idiomas Língua Solta
 
-Exemplo de Projeto para a Disciplina DCT1106 - Programação
+Exemplo de Projeto para a Disciplina DCT1106 - Programação, 2021.1
+
+#
 
 Universidade Federal do Rio Grande do Norte 
 
