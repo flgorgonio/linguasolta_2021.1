@@ -1,18 +1,18 @@
 # Escola de Idiomas Língua Solta
-Projeto Sistema de Gestão Escolar 
+Projeto de Sistema de Gestão Escolar 
 
-Exemplo de Projeto para a Disciplina DCT1106 - Programação, 2021.1
+Projeto exemplo para a Disciplina DCT1106 - Programação
+Semestre 2021.1
 
 #
 
 Universidade Federal do Rio Grande do Norte 
 Centro de Ensino Superior do Seridó 
 Departamento de Computação e Tecnologia 
-Disciplina DCT1106 -- Programação 
-
+Bacharelado em Sistemas de Informação
 
 Developed by @flgorgonio - Jun, 2021
 
 ## Escola de Idiomas Língua Solta
 
-Programa exemplo utilizado na disciplina DCT1106 - Programação, para fins didáticos de ilustração. O programa contém os principais módulos e funcionalidades que serão exigidos na avaliação dos projetos a serem desenvolvidos pelos alunos ao longo da disciplina. Serve como um guia de consulta e referência para o desenvolvimento dos demais projetos. Todos os dados e informações utilizados neste programa são fictícios.
+Programa para fins didáticos de ilustração, utilizado como exemplo de codificação de funcionalidades em linguagem C, durante a disciplina DCT1106 - Programação do curso de Bacharelado em Sistemas de Informação da Universidade Federal do Rio Grande do Norte. O programa contém os principais módulos e funcionalidades que serão exigidos na avaliação dos projetos a serem desenvolvidos pelos alunos ao longo da disciplina. Serve como um guia de consulta e referência para o desenvolvimento dos demais projetos. Todos os dados e informações utilizados neste programa são fictícios. O autor não se responsabiliza por quaisquer danos, sejam pessoais, materiais ou imateriais, decorrentes da utilização deste código-fonte ou de trechos do mesmo, assim como, não garante o funcionamento correto do mesmo.
