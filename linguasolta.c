@@ -97,9 +97,9 @@ void telaEquipe(void) {
     printf("///                                                                         ///\n");
     printf("///            = = = = = Sistema de Gestão Escolar = = = = =                ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Este projeto foi desenvolvido por:                           ///\n");
+    printf("///            Este projeto exemplo foi desenvolvido por:                   ///\n");
     printf("///                                                                         ///\n");
-    printf("///            Flavius Gorgônio                                             ///\n");
+    printf("///            Prof. Flavius Gorgônio                                       ///\n");
     printf("///            E-mail: flavius.gorgonio@ufrn.br                             ///\n");
     printf("///            Redes sociais: @flgorgonio                                   ///\n");
     printf("///            Repositório: https://github.com/flgorgonio/linguasolta       ///\n");
