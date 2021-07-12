@@ -8,27 +8,51 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /////
 // Assinatura das funções
 void telaSobre(void);
 void telaPrincipal(void);
 void telaEquipe(void);
+void menuPrincipal(void);
+
+void menuAluno(void);
+void telaCadastrarAluno(void);
+
+void menuProfessor(void);
+void telaCadastrarProfessor(void);
+
+void menuTurma(void);
+void telaCadastrarTurma(void);
+
+
+
 
 /////
 // Programa principal
 int main(void) {
     telaSobre();
-    telaPrincipal();
     telaEquipe();
+    telaPrincipal();
+    menuPrincipal();
+    menuAluno();
+    telaCadastrarAluno();
+    menuProfessor();
+    telaCadastrarProfessor();
+    menuTurma();
+    telaCadastrarTurma();
+
     return 0;
 }
+
 
 /////
 // Funções
 
 void telaSobre(void) {
-    printf("\n");
+    system("clear");
+	printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
@@ -50,12 +74,14 @@ void telaSobre(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
 }
 
 
-
 void telaPrincipal(void) {
-    printf("\n");
+    system("clear");
+	printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
@@ -78,12 +104,14 @@ void telaPrincipal(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
 }
 
 
-
 void telaEquipe(void) {
-    printf("\n");
+    system("clear");
+	printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
     printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
@@ -106,4 +134,240 @@ void telaEquipe(void) {
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void menuPrincipal(void) {
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jun, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = =  Menu Principal = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           1. Módulo aluno                                             ///\n");
+	printf("///           2. Módulo professor                                         ///\n");
+	printf("///           3. Módulo turma                                             ///\n");
+	printf("///           4. Módulo relatórios                                        ///\n");
+	printf("///           5. Informações sobre o sistema                              ///\n");
+	printf("///           0. Encerra o programa                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void menuAluno(void) {
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = =  Menu Aluno = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           1. Cadastrar um novo aluno                                  ///\n");
+	printf("///           2. Pesquisar os dados de um aluno                           ///\n");
+	printf("///           3. Atualizar o cadastro de um aluno                         ///\n");
+	printf("///           4. Excluir um aluno do sistema                              ///\n");
+	printf("///           0. Voltar ao menu anterior                                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void menuProfessor(void) {
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = =  Menu Professor = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           1. Cadastrar um novo professor                              ///\n");
+	printf("///           2. Pesquisar os dados de um professor                       ///\n");
+	printf("///           3. Atualizar o cadastro de um professor                     ///\n");
+	printf("///           4. Excluir um professor do sistema                          ///\n");
+	printf("///           0. Voltar ao menu anterior                                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void menuTurma(void) {
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = =  Menu Turma = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           1. Cadastrar uma nova turma                                 ///\n");
+	printf("///           2. Pesquisar os dados de uma turma                          ///\n");
+	printf("///           3. Atualizar o cadastro de uma turma                        ///\n");
+	printf("///           4. Excluir uma turma do sistema                             ///\n");
+	printf("///           0. Voltar ao menu anterior                                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void telaCadastrarAluno(void) {
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Cadastrar Aluno = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Matrícula:                                                  ///\n");
+	printf("///           Nome:                                                       ///\n");
+	printf("///           E-mail:                                                     ///\n");
+	printf("///           Data de Nascimento:                                         ///\n");
+	printf("///           Celular:                                                    ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void telaCadastrarProfessor(void) {
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = Cadastrar Professor = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           CPF:                                                        ///\n");
+	printf("///           Nome:                                                       ///\n");
+	printf("///           E-mail:                                                     ///\n");
+	printf("///           Data de Nascimento:                                         ///\n");
+	printf("///           Celular:                                                    ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void telaCadastrarTurma(void) {
+    system("clear");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Cadastrar Turma = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+    printf("///           Código da turma (Ex. F01, S02):                             ///\n");
+    printf("///           Nome da turma (Ex. Francês Básico 1):                       ///\n");
+	printf("///           Semestre (Ex. 2021.1):                                      ///\n");
+	printf("///           Horário (Ex. 35M12):                                        ///\n");
+	printf("///           CPF do professor (apenas números):                          ///\n");
+	printf("///           Local das aulas (Ex. Sala F1):                              ///\n");                                                                     ///\n");
+	printf("///                                                                       ///\n");
+    printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
 }
