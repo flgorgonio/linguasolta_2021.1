@@ -373,6 +373,13 @@ void telaCadastrarProfessor(void) {
 
 
 void telaCadastrarTurma(void) {
+	char codTurma[4];
+	char nomeTurma[31];
+	char semestre[7];
+	char horario[15];
+	char cpf[12];
+	char local[11];
+
     system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -390,12 +397,24 @@ void telaCadastrarTurma(void) {
 	printf("///           = = = = = = = = Cadastrar Turma = = = = = = = =             ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
-    printf("///           Código da turma (Ex. F01, S02):                             ///\n");
-    printf("///           Nome da turma (Ex. Francês Básico 1):                       ///\n");
-	printf("///           Semestre (Ex. 2021.1):                                      ///\n");
-	printf("///           Horário (Ex. 35M12):                                        ///\n");
-	printf("///           CPF do professor (apenas números):                          ///\n");
-	printf("///           Local das aulas (Ex. Sala F1):                              ///\n");                                                                     ///\n");
+    printf("///           Código da turma (Ex. F01, S02): ");
+	scanf("%[A-Z0-9]", codTurma);
+	getchar();
+    printf("///           Nome da turma (Ex. Francês Básico 1): ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ0-9]", nomeTurma);
+	getchar();
+	printf("///           Semestre (Ex. 2021.1): ");
+	scanf("%[0-9.]", semestre);
+	getchar();
+	printf("///           Horário (Ex. 35M12): ");
+	scanf("%[0-9MTN]", horario);
+	getchar();
+	printf("///           CPF do professor (apenas números): ");
+	scanf("%[0-9]", cpf);
+	getchar();
+	printf("///           Local das aulas (Ex. Sala F1): "); 
+	scanf("%[A-Za-z 0-9]", local);
+	getchar();
 	printf("///                                                                       ///\n");
     printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
