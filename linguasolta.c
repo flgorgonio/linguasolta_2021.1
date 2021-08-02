@@ -325,6 +325,12 @@ void telaCadastrarAluno(void) {
 
 
 void telaCadastrarProfessor(void) {
+	char cpf[12]; 
+	char nome[51];
+	char email[51];
+	char nasc[11];
+	char celular[12];
+
     system("clear");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
@@ -342,11 +348,21 @@ void telaCadastrarProfessor(void) {
 	printf("///           = = = = = = = Cadastrar Professor = = = = = = =             ///\n");
 	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
 	printf("///                                                                       ///\n");
-	printf("///           CPF:                                                        ///\n");
-	printf("///           Nome:                                                       ///\n");
-	printf("///           E-mail:                                                     ///\n");
-	printf("///           Data de Nascimento:                                         ///\n");
-	printf("///           Celular:                                                    ///\n");
+	printf("///           CPF (apenas números): ");
+	scanf("%[0-9]", cpf);
+	getchar();
+	printf("///           Nome completo: ");
+	scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+	getchar();
+	printf("///           E-mail: ");
+	scanf("%[A-Z0-9a-z@._]", email);
+	getchar();
+	printf("///           Data de Nascimento (dd/mm/aaaa):  ");
+	scanf("%[0-9/]", nasc);
+	getchar();
+	printf("///           Celular  (apenas números): ");
+	scanf("%[0-9]", celular);
+	getchar();
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
