@@ -27,8 +27,6 @@ void menuTurma(void);
 void telaCadastrarTurma(void);
 
 
-
-
 /////
 // Programa principal
 int main(void) {
