@@ -15,10 +15,14 @@
 void telaSobre(void);
 void telaPrincipal(void);
 void telaEquipe(void);
-void menuPrincipal(void);
+char menuPrincipal(void);
 
-void menuAluno(void);
+void moduloAluno(void);
+char menuAluno(void);
 void telaCadastrarAluno(void);
+void telaPesquisarAluno(void);
+void telaAlterarAluno(void);
+void telaExcluirAluno(void);
 
 void menuProfessor(void);
 void telaCadastrarProfessor(void);
@@ -26,20 +30,28 @@ void telaCadastrarProfessor(void);
 void menuTurma(void);
 void telaCadastrarTurma(void);
 
+void menuRelatorio(void);
+
 
 /////
 // Programa principal
 int main(void) {
-    telaSobre();
-    telaEquipe();
-    telaPrincipal();
-    menuPrincipal();
-    menuAluno();
-    telaCadastrarAluno();
-    menuProfessor();
-    telaCadastrarProfessor();
-    menuTurma();
-    telaCadastrarTurma();
+	char opcao;
+	do {
+		opcao = menuPrincipal();
+		switch(opcao) {
+			case '1': 	moduloAluno();
+						break;
+			case '2': 	menuProfessor();
+						break;
+			case '3': 	menuTurma();
+						break;
+			case '4': 	menuRelatorio();
+						break;
+			case '5': 	telaSobre();
+						break;
+		} 		
+	} while (opcao != '0');
 
     return 0;
 }
@@ -49,7 +61,7 @@ int main(void) {
 // Funções
 
 void telaSobre(void) {
-    system("clear");
+    system("clear||cls");
 	printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -78,7 +90,7 @@ void telaSobre(void) {
 
 
 void telaPrincipal(void) {
-    system("clear");
+    system("clear||cls");
 	printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -108,7 +120,7 @@ void telaPrincipal(void) {
 
 
 void telaEquipe(void) {
-    system("clear");
+    system("clear||cls");
 	printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -137,8 +149,9 @@ void telaEquipe(void) {
 }
 
 
-void menuPrincipal(void) {
-    system("clear");
+char menuPrincipal(void) {
+	char op;
+    system("clear||cls");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -162,18 +175,42 @@ void menuPrincipal(void) {
 	printf("///           5. Informações sobre o sistema                              ///\n");
 	printf("///           0. Encerra o programa                                       ///\n");
 	printf("///                                                                       ///\n");
-	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///           Escolha a opção desejada: ");
+	scanf("%c", &op);
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+	return op;
 }
 
 
-void menuAluno(void) {
-    system("clear");
+
+void moduloAluno(void) {
+	char opcao;
+	do {
+		opcao = menuAluno();
+		switch(opcao) {
+			case '1': 	telaCadastrarAluno();
+						break;
+			case '2': 	telaPesquisarAluno();
+						break;
+			case '3': 	telaAlterarAluno();
+						break;
+			case '4': 	telaExcluirAluno();
+						break;
+		} 		
+	} while (opcao != '0');
+
+}
+
+
+
+char menuAluno(void) {
+	char op;
+    system("clear||cls");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -196,18 +233,20 @@ void menuAluno(void) {
 	printf("///           4. Excluir um aluno do sistema                              ///\n");
 	printf("///           0. Voltar ao menu anterior                                  ///\n");
 	printf("///                                                                       ///\n");
-	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///           Escolha a opção desejada: ");
+	scanf("%c", &op);
 	printf("///                                                                       ///\n");
 	printf("///                                                                       ///\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
 	getchar();
+	return op;
 }
 
 
 void menuProfessor(void) {
-    system("clear");
+    system("clear||cls");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -241,7 +280,7 @@ void menuProfessor(void) {
 
 
 void menuTurma(void) {
-    system("clear");
+    system("clear||cls");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -274,6 +313,41 @@ void menuTurma(void) {
 }
 
 
+void menuRelatorio(void) {
+    system("clear||cls");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = =  Menu Relatório = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           1. Relatório de Alunos                                      ///\n");
+	printf("///           2. Relatório de Professores                                 ///\n");
+	printf("///           3. Relatório de Turmas                                      ///\n");
+	printf("///           4. Relatório de Matrículas                                  ///\n");
+	printf("///           0. Voltar ao menu anterior                                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("///           Escolha a opção desejada:                                   ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+
 void telaCadastrarAluno(void) {
 	char matr[12];
 	char nome[51];
@@ -281,7 +355,7 @@ void telaCadastrarAluno(void) {
 	char nasc[11];
 	char celular[12];
 
-    system("clear");
+    system("clear||cls");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -322,6 +396,86 @@ void telaCadastrarAluno(void) {
 }
 
 
+
+void telaPesquisarAluno(void) {
+    system("clear||cls");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Pesquisar Aluno = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+
+void telaAlterarAluno(void) {
+    system("clear||cls");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Alterar Aluno = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
+void telaExcluirAluno(void) {
+    system("clear||cls");
+	printf("\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          = = = =   Escola de Idiomas Língua Solta    = = = =          ///\n");
+	printf("///          = = = = = = = = = = = = = = = = = = = = = = = = = =          ///\n");
+	printf("///          ===================================================          ///\n");
+	printf("///                Developed by  @flgorgonio - Jan, 2021                  ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("///                                                                       ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = Excluir Aluno = = = = = = = =             ///\n");
+	printf("///           = = = = = = = = = = = = = = = = = = = = = = = =             ///\n");
+	printf("///                                                                       ///\n");
+	printf("///                                                                       ///\n");
+	printf("/////////////////////////////////////////////////////////////////////////////\n");
+	printf("\n");
+	printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+	getchar();
+}
+
+
 void telaCadastrarProfessor(void) {
 	char cpf[12]; 
 	char nome[51];
@@ -329,7 +483,7 @@ void telaCadastrarProfessor(void) {
 	char nasc[11];
 	char celular[12];
 
-    system("clear");
+    system("clear||cls");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
@@ -378,7 +532,7 @@ void telaCadastrarTurma(void) {
 	char cpf[12];
 	char local[11];
 
-    system("clear");
+    system("clear||cls");
 	printf("\n");
 	printf("/////////////////////////////////////////////////////////////////////////////\n");
 	printf("///                                                                       ///\n");
